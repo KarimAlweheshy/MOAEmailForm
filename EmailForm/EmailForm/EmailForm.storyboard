@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xPZ-se-gQh">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--EmailForm Form-->
+        <scene sceneID="8rN-NL-qgq">
+            <objects>
+                <viewController id="xPZ-se-gQh" customClass="EmailFormViewController" customModule="Email" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jvN-sZ-yDV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EmailForm Form" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWo-Ze-jnz">
+                                <rect key="frame" x="238" y="290" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UWo-Ze-jnz" firstAttribute="centerY" secondItem="jvN-sZ-yDV" secondAttribute="centerY" id="Hb7-x0-qN2"/>
+                            <constraint firstItem="UWo-Ze-jnz" firstAttribute="centerX" secondItem="jvN-sZ-yDV" secondAttribute="centerX" id="NzZ-mX-vs0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iFE-nQ-5YZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="EmailForm Form" id="EDj-Q5-TgN">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="yvd-G3-MNx">
+                            <connections>
+                                <action selector="didTapCancel" destination="xPZ-se-gQh" id="pfz-8U-ySE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="KMI-Gn-axx">
+                            <connections>
+                                <action selector="didTapSave" destination="xPZ-se-gQh" id="DOT-NA-1Qv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cSj-b6-iYR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="356" y="-312"/>
+        </scene>
+    </scenes>
+</document>
