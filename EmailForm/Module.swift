@@ -21,17 +21,17 @@ open class Module: ModuleType {
         self.dismissBlock = dismissBlock
     }
     
-    public func execute<T>(networking: NetworkingType, request: InternalRequest, completionHandler: @escaping (Result<T>) -> Void) where T : Decodable, T : Encodable {
+    public func execute<T>(networking: NetworkingType,
+                           request: InternalRequest,
+                           completionHandler: @escaping (Result<T>) -> Void) {
         guard let completionBlock = completionHandler as? ((Result<EmailResponse>) -> Void) else {
             completionHandler(.error(ResponseError.badRequest400(error: nil)))
             return
         }
         
-        let dataProvider = DataProvider(networking: networking)
-        
         var viewController: UIViewController!
         if request is EmailCreationRequest {
-            viewController = EmailFormBuilder.make(dataProvider: dataProvider) { result in
+            viewController = EmailFormBuilder.make(networking: networking) { result in
                 self.dismissBlock(viewController)
                 completionBlock(result)
             }

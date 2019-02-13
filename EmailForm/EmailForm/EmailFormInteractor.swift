@@ -7,14 +7,15 @@
 //
 
 import Foundation
+import Networking
 
 protocol EmailFormInteractorType {
 }
 
 final class EmailFormInteractor: EmailFormInteractorType {
-    fileprivate let dataProvider: DataProvider
+    fileprivate let networking: NetworkingType
     
-    init(dataProvider: DataProvider) {
-        self.dataProvider = dataProvider
+    init(networking: NetworkingType) {
+        self.networking = networking
     }
 }

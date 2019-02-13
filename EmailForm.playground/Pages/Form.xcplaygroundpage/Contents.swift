@@ -13,8 +13,7 @@ class Networking: NetworkingType {
     }
 }
 
-let request = EmailCreationRequest(data: EmailCreationRequestBody(draftID: nil, receiversIDs: nil, ccIDs: nil,
-                                                                  bccIDs: nil, subject: nil, body: nil, attachementsURLs: nil))
+let request = EmailCreationRequest(data: EmailCreationRequestBody())
 
 Networking().execute(request: request, presentationBlock: { (viewController) in
     PlaygroundPage.current.liveView = playgroundControllers(device: .phone4inch,
